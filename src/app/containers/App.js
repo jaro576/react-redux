@@ -1,9 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import actionTypes from '../constants/actionTypes';
-import User from './Users';
-import Main from './Main';
+import * as user from '../actions/userActions';
+import {User} from '../components/Users';
+import {Main} from '../components/Main';
 
 class App extends React.Component {
     render() {
@@ -17,19 +17,13 @@ class App extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    return {
-        user: state.user,
-        math: state.math
-    };
+    return { ...state };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
         setName: (name) => {
-            dispatch({
-                type: actionTypes.USER_SET_NAME,
-                payload: name
-            });
+            dispatch(user.setName('kkkkk'));
         }
     };
 };
