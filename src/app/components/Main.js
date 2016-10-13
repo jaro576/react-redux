@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class User extends React.Component{
+export default class Main extends React.Component{
     render(){
         return (
           <div>
@@ -9,7 +9,7 @@ export default class User extends React.Component{
                       <h1>User page</h1>
                   </div>
               </div>
-              <div calssName="row">
+              <div className="row">
                   <div className="col-xs-12">
                       <p> User name: {this.props.username}</p>
                   </div>
